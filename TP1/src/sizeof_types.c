@@ -25,9 +25,7 @@ int main() {
     printf("unsigned long long int : %zu octets\n\n", sizeof(unsigned long long int));
 
     printf("float : %zu octets\n\n", sizeof(float));
-
     printf("double : %zu octets\n\n", sizeof(double));
-
     printf("long double : %zu octets\n\n", sizeof(long double));
 
     return 0;
