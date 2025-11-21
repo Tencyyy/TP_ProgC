@@ -86,16 +86,4 @@ int main() {
     }
 
     return 0;
-} (modifié)vendredi 21 novembre 2025 15:26
-:100:
-Clique pour réagir
-:joy:
-Clique pour réagir
-:thumbsup:
-Clique pour réagir
-Ajouter une réaction
-Répondre
-Transférer
-Plus
-
-Envoyer un message à @nadir
+} 
