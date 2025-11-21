@@ -37,7 +37,23 @@ int main() {
 
     strcpy(etudiants[3].nom, "Lambert");
     strcpy(etudiants[3].prenom, "Lucas");
-    strcpy(etudiants[3].adresse, "8, Avenue du Pra (modifié)vendredi 21 novembre 2025 15:27
+    strcpy(etudiants[3].adresse, "8, Avenue du Prado, Marseille");
+    etudiants[3].note1 = 12.5;
+    etudiants[3].note2 = 15.0;
 
-} 
+    strcpy(etudiants[4].nom, "Petit");
+    strcpy(etudiants[4].prenom, "Emma");
+    strcpy(etudiants[4].adresse, "10, Rue Victor Hugo, Lyon");
+    etudiants[4].note1 = 18.0;
+    etudiants[4].note2 = 16.5;
 
+    // Affichage des informations des étudiants
+    for (int i = 0; i < NB_ETUDIANTS; i++) {
+        printf("Etudiant %d : %s %s\n", i+1, etudiants[i].prenom, etudiants[i].nom);
+        printf("Adresse : %s\n", etudiants[i].adresse);
+        printf("Note Programmation C : %.1f\n", etudiants[i].note1);
+        printf("Note Système d'exploitation : %.1f\n\n", etudiants[i].note2);
+    }
+
+    return 0;
+}
