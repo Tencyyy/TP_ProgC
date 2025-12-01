@@ -1,21 +1,23 @@
-#ifndef LISTE_H
-#define LISTE_H
+#include <stdio.h>
+#include <stdlib.h>
+#include "liste.h"
 
-struct couleur {
-    unsigned char r, g, b, a;
-};
+void init_liste(struct liste_couleurs *l) {
+    l->premier = NULL;
+}
 
-struct noeud {
-    struct couleur c;
-    struct noeud *suivant;
-};
+void insertion(struct couleur *c, struct liste_couleurs *l) {
+    struct noeud *n = malloc(sizeof(struct noeud));
+    n->c = *c;
+    n->suivant = l->premier;
+    l->premier = n;
+}
 
-struct liste_couleurs {
-    struct noeud *premier;
-};
-
-void init_liste(struct liste_couleurs *l);
-void insertion(struct couleur *c, struct liste_couleurs *l);
-void parcours(struct liste_couleurs *l);
-
-#endif
+void parcours(struct liste_couleurs *l) {
+    struct noeud *tmp = l->premier;
+    while (tmp) {
+        printf("Couleur : R=%02X G=%02X B=%02X A=%02X\n",
+                tmp->c.r, tmp->c.g, tmp->c.b, tmp->c.a);
+        tmp = tmp->suivant;
+    }
+}
